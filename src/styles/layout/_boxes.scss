@@ -1,0 +1,178 @@
+.body-box {
+    min-height: calc(100vh - 80px);
+    max-width: 1440px;
+    margin: 0 auto 80px;
+    opacity: 0;
+    animation: fade 0.7s ease-in-out forwards;
+}
+
+.row {
+    display: flex;
+    padding: 0.5rem 1rem;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+.col-75 {
+    width: 75%;
+}
+
+.col-70 {
+    width: 70%;
+}
+
+.col-66 {
+    width: 66.66666%;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-33 {
+    width: 33.33333%;
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+@media (max-width: 720px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-75,
+    .col-70,
+    .col-66,
+    .col-50,
+    .col-33,
+    .col-30,
+    .col-25 {
+        width: 100%;
+    }
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.j-space-between {
+    justify-content: space-between;
+}
+
+.j-space-around {
+    justify-content: space-around;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-end {
+    justify-content: flex-end;
+}
+
+.a-start {
+    align-items: flex-start;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.a-end {
+    align-items: flex-end;
+}
+
+/* Espaciados y márgenes */
+
+.m {
+    margin: 1rem;
+}
+
+.m-t {
+    margin-top: 1rem;
+}
+
+.m-b {
+    margin-bottom: 1rem;
+}
+
+.m-l {
+    margin-left: 1rem;
+}
+
+.m-r {
+    margin-right: 1rem;
+}
+
+.m-small {
+    margin: 0.5rem;
+}
+
+.m-t-small {
+    margin-top: 0.5rem;
+}
+
+.m-b-small {
+    margin-bottom: 0.5rem;
+}
+
+.m-l-small {
+    margin-left:0.5rem;
+}
+
+.m-r-small {
+    margin-right: 0.5rem;
+}
+
+.p {
+    padding: 1rem;
+}
+
+.p-t {
+    padding-top: 1rem;
+}
+
+.p-b {
+    padding-bottom: 1rem;
+}
+
+.p-l {
+    padding-left: 1rem;
+}
+
+.p-r {
+    padding-right: 1rem;
+}
+
+.p-t-small {
+    padding-top: 0.5rem;
+}
+
+.p-b-small {
+    padding-bottom: 0.5rem;
+}
+
+.p-l-small {
+    padding-left:0.5rem;
+}
+
+.p-r-small {
+    padding-right: 0.5rem;
+}
+

@@ -1,0 +1,142 @@
+
+.actividades {
+    width: 100%;
+    padding: 2em;
+    border: 1px solid #f7f7f7;;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.25);
+
+    h3 {
+        margin-top: 3rem;
+    }
+    
+    h3:first-child {
+        margin-top: 1.5rem;
+    }
+
+    hr {
+        margin: 1em 0;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        min-width: 20px;
+    }
+
+    label {
+        font-size: 1.1em;
+        display: block;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        @include flex(flex-start, center);
+
+        &:hover {
+            background-color: rgb(236, 236, 236);
+        }
+
+        img {
+            opacity: 0;
+            margin-left: 10px;
+            min-width: 22px;
+            transition: all 200ms ease-in-out;
+        }
+
+    }
+
+    label.disabled {
+        pointer-events: none;
+    }
+
+    label.correcta {
+        color: #168888;
+
+        img.correcta {
+            opacity: 1;
+        }
+    }
+
+    label.incorrecta {
+        color: #dc143c;
+
+        img.incorrecta {
+            opacity: 1;
+        }
+    }
+
+    .resultado {
+        width: 100%;
+        @include flex(flex-start, center);
+        border-radius: 4px;
+        margin: 0.5em 0;
+        padding: 1em 0;
+
+        span {
+            margin: 0 10px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 5px;
+        }
+
+        p:nth-child(1){
+            font-size: 14px;
+            color: #9b9b9b;
+        }
+
+        p:nth-child(2){
+            font-size: 18px;
+        }
+
+        img {
+            min-width: 22px;
+            display: none;
+            margin-right: 10px;
+        }
+    }
+
+    .resultado.correcto {
+        border: 1px solid #008489;
+    }
+
+    .resultado.incorrecto {
+        border: 1px solid #dc143c;
+    }
+}
+
+@media (max-width: 440px) {
+    .actividades {
+        padding: 0.5em;
+    }
+}
+
+.mensaje-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p.not-pass {
+        display: none;
+        font-size: 18px;
+        border: 1px solid #f5c6cb;
+        border-radius: 8px;
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    p.pass {
+        display: none;
+        font-size: 18px;
+        border: 1px solid #c3e6cb;
+        border-radius: 8px;
+        background-color: #d4edda;
+        color: #155724;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+}

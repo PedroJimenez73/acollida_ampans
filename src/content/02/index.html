@@ -1,0 +1,57 @@
+<div class="body-box">
+    <div class="row">
+        <div class="col-100">
+            <p>Gràcies, de debò! Res del que fem no seria possible sense persones com tu que decidiu unir esforços amb nosaltres. Ara, tot just ens estem coneixent. Aquí et presentem com som i com treballem.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-30 flex j-end a-end">
+            <div class="video-foot">
+                <h2>VÍDEO</h2>
+                <hr>
+                <p><b>Amor per l’ofici</b></p>
+                <p>Mireu atentament,
+                <br>us posarem a prova!</p>
+            </div>
+        </div>
+        <div class="col-50">
+            <a class="required" style="display: block" href="https://www.youtube.com/watch?v=PN2_xdHT8Fg" target="_blank" onclick="setEvent(1)">
+                <div>
+                    <img style="display: block" src="img/acollida_02.png" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="col-20">
+        </div>
+    </div>
+</div>
+<script>
+    var checkEvents = [false];
+    var required = document.querySelectorAll('.required');
+    setEnventsMsg(1, true);
+    if (progress[1].pass) {
+        let pendingEvents = 0;
+        setEnventsMsg(pendingEvents, true);
+        checkEvents = [true];
+        for (i=0; i < required.length; i++) {
+            required[i].classList.add('done');
+        }
+    }
+    function setEvent(e){
+        let pendingEvents = 0;
+        e--;
+        required[e].classList.add('done');
+        checkEvents[e] = true;
+        for (i=0; i < checkEvents.length; i++) {
+            if (!checkEvents[i]) {
+                pendingEvents++;
+            }
+        }
+        setEnventsMsg(pendingEvents, true);
+        if(pendingEvents === 0) {
+            passPage(1);
+        }
+    }
+</script>
+
+

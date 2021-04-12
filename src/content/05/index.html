@@ -1,0 +1,158 @@
+<div class="body-box">
+    <div class="row">
+        <div class="col-100">
+            <p>Els valors que promovem des d’AMPANS comporten una sèrie de compromisos ètics tant en el desenvolupament de la tasca de l’organització com en la presa de decisions.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-50">
+            <p>Compromís amb les persones ateses i les seves famílies.</p>
+            <p>Les persones amb discapacitat intel·lectual són la raó de ser d’AMPANS i són l’eix central de les activitats de l’organització. Treballem per a millorar la  seva qualitat de vida i la de les seves famílies.</p>
+            <p>I volem que sàpigues que estaràs envoltat d’un equip motivat, apassionat per la feina que fa, i compromès amb aquest projecte.</p>
+            <p>Promovem un estil de direcció participatiu que fomenta la màxima implicació de les persones de l’organització i que vetlla per aconseguir un bon clima laboral, incentivant la comunicació, la creativitat i la iniciativa de tothom.</p>
+            <p>Ens hi ajuda el 
+                <span class="modal-link required" onclick="showModal()">
+                    Codi Ètica 
+                    <img style="height: 16px" src="img/icons/file-plus.svg" alt="">
+                    <img class="done" style="height: 16px" src="img/icons/check-square-grey.svg" alt=""> 
+                </span> d’AMPANS i també el 
+                <span class="modal-link required" onclick="showModal2()">
+                    Llibre de Polítiques 
+                    <img style="height: 16px" src="img/icons/file-plus.svg" alt=""> 
+                    <img class="done" style="height: 16px" src="img/icons/check-square-grey.svg" alt=""> 
+                </span>, dos documents que et serviran de referència per entendre com treballem a AMPANS.</p>
+        </div>
+        <div class="col-50">
+            <p><b>Treballar a AMPANS vol dir …</b></p>
+            <p><i>“arribar a casa cada dia sabent que la teva feina ajuda a millorar la qualitat de vida de les persones”</i></p>
+            <p><i>“és un aprenentatge continu”</i></p>
+            <p><i>“és una gran família”</i></p>
+            <a class="required" style="display: block" href="https://www.youtube.com/watch?v=8xWtqmNSZoY" target="_blank" onclick="setEvent(3)">
+                <div>
+                    <img style="display: block" src="img/acollida_05.png" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="reader-overlay" class="reader-overlay"></div>
+<div id="close-modal" class="close-modal">
+    <img onclick="closeModal()" src="img/icons/x.svg" alt="">
+</div>
+<div id="modal" class="reader-modal">
+    <p class="instructions">Avança amb el ratolí per llegir tot el document. En acabar trobaràs un boto que hauràs de clicar per confirmar has llegit el document.</p>
+    <img src="img/codi/codi_1.png" alt="">
+    <img src="img/codi/codi_2.png" alt="">
+    <img src="img/codi/codi_3.png" alt="">
+    <img src="img/codi/codi_4.png" alt="">
+    <img src="img/codi/codi_5.png" alt="">
+    <img src="img/codi/codi_6.png" alt="">
+    <img src="img/codi/codi_7.png" alt="">
+    <img src="img/codi/codi_8.png" alt="">
+    <img src="img/codi/codi_9.png" alt="">
+    <img src="img/codi/codi_10.png" alt="">
+    <img src="img/codi/codi_11.png" alt="">
+    <img src="img/codi/codi_12.png" alt="">
+    <img src="img/codi/codi_13.png" alt="">
+    <img src="img/codi/codi_14.png" alt="">
+    <button type="button" style="display: block; margin: 20px auto;" onclick="setReaded()">HE LLEGIT EL CODI D’ÈTICA AMPANS</button>
+</div>
+<div id="close-modal-2" class="close-modal">
+    <img onclick="closeModal2()" src="img/icons/x.svg" alt="">
+</div>
+<div id="modal-2" class="reader-modal">
+    <p class="instructions">Avança amb el ratolí per llegir tot el document. En acabar trobaràs un boto que hauràs de clicar per confirmar has llegit el document.</p>
+    <img src="img/politics/p1.jpg" alt="">
+    <img src="img/politics/p2.jpg" alt="">
+    <img src="img/politics/p3.jpg" alt="">
+    <img src="img/politics/p4.jpg" alt="">
+    <img src="img/politics/p5.jpg" alt="">
+    <img src="img/politics/p6.jpg" alt="">
+    <img src="img/politics/p7.jpg" alt="">
+    <img src="img/politics/p8.jpg" alt="">
+    <img src="img/politics/p9.jpg" alt="">
+    <img src="img/politics/p10.jpg" alt="">
+    <img src="img/politics/p11.jpg" alt="">
+    <img src="img/politics/p12.jpg" alt="">
+    <img src="img/politics/p13.jpg" alt="">
+    <img src="img/politics/p14.jpg" alt="">
+    <img src="img/politics/p15.jpg" alt="">
+    <img src="img/politics/p16.jpg" alt="">
+    <img src="img/politics/p17.jpg" alt="">
+    <img src="img/politics/p18.jpg" alt="">
+    <img src="img/politics/p19.jpg" alt="">
+    <img src="img/politics/p20.jpg" alt="">
+    <img src="img/politics/p21.jpg" alt="">
+    <img src="img/politics/p22.jpg" alt="">
+    <img src="img/politics/p23.jpg" alt="">
+    <button type="button" style="display: block; margin: 20px auto;" onclick="setReaded2()">HE LLEGIT EL LLIBRE DE POLÍTIQUES AMPANS</button>
+</div>
+<script>
+    var readerOverlay = document.getElementById('reader-overlay');
+    var closeModalHeader = document.getElementById('close-modal');
+    var modal = document.getElementById('modal');
+    var closeModalHeader2 = document.getElementById('close-modal-2');
+    var modal2 = document.getElementById('modal-2');
+
+    function showModal() {
+        readerOverlay.classList.add('show')
+        closeModalHeader.classList.add('show')
+        modal.classList.add('show')
+    }
+
+    function closeModal() {
+        readerOverlay.classList.remove('show')
+        closeModalHeader.classList.remove('show')
+        modal.classList.remove('show') 
+    }
+
+    function setReaded() {
+        closeModal();
+        setEvent(1);
+    }
+
+    function showModal2() {
+        readerOverlay.classList.add('show')
+        closeModalHeader2.classList.add('show')
+        modal2.classList.add('show')
+    }
+
+    function closeModal2() {
+        readerOverlay.classList.remove('show')
+        closeModalHeader2.classList.remove('show')
+        modal2.classList.remove('show') 
+    }
+
+    function setReaded2() {
+        closeModal2();
+        setEvent(2);
+    }
+</script>
+<script>
+    var checkEvents = [false, false, false];
+    var required = document.querySelectorAll('.required');
+    setEnventsMsg(3, true);
+    if (progress[4].pass) {
+        let pendingEvents = 0;
+        setEnventsMsg(pendingEvents, true);
+        checkEvents = [true, true, true];
+        for (i=0; i < required.length; i++) {
+            required[i].classList.add('done');
+        }
+    }
+    function setEvent(e){
+        let pendingEvents = 0;
+        e--;
+        required[e].classList.add('done');
+        checkEvents[e] = true;
+        for (i=0; i < checkEvents.length; i++) {
+            if (!checkEvents[i]) {
+                pendingEvents++;
+            }
+        }
+        setEnventsMsg(pendingEvents, true);
+        if(pendingEvents === 0) {
+            passPage(4);
+        }
+    }
+</script>

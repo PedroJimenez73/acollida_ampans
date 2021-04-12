@@ -1,0 +1,91 @@
+<div class="body-box">
+    <div class="row">
+        <div class="col-100">
+            <div class="actividades">
+                <div style="display: flex; margin: 0; padding: 0;">
+                    <div class="col-50">
+                        <div class="resultado">
+                            <img class="correct-icon" src="img/icons/check-circle.svg">
+                            <img class="incorrect-icon" src="img/icons/x-circle.svg">
+                            <div>
+                                <p>PREGUNTA 1</p>
+                                <p class="questionResult"></p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <img class="correct-icon" src="img/icons/check-circle.svg">
+                            <img class="incorrect-icon" src="img/icons/x-circle.svg">
+                            <div>
+                                <p>PREGUNTA 2</p>
+                                <p class="questionResult"></p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <img class="correct-icon" src="img/icons/check-circle.svg">
+                            <img class="incorrect-icon" src="img/icons/x-circle.svg">
+                            <div>
+                                <p>PREGUNTA 3</p>
+                                <p class="questionResult"></p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <img class="correct-icon" src="img/icons/check-circle.svg">
+                            <img class="incorrect-icon" src="img/icons/x-circle.svg">
+                            <div>
+                                <p>PREGUNTA 4</p>
+                                <p class="questionResult"></p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <img class="correct-icon" src="img/icons/check-circle.svg">
+                            <img class="incorrect-icon" src="img/icons/x-circle.svg">
+                            <div>
+                                <p>PREGUNTA 5</p>
+                                <p class="questionResult"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mensaje-final">
+                    <p id="passMsg" class="pass">Enhorabona, has superat les activitats! Prem Següent per continuar.</p>
+                    <p id="notPassMsg" class="not-pass">Ho sentim, no has superat les activitats. Pots prémer en repassar per estudiar de nou i tornar a contestar les preguntes.</p>
+                    <button id="resetBtn"  class="outline" onclick="reset()">Repassar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var correctIcons = document.getElementsByClassName('correct-icon');
+    var incorrectIcons = document.getElementsByClassName('incorrect-icon');
+    var questionResults = document.getElementsByClassName('questionResult');
+    var passMsg = document.getElementById('passMsg');
+    var notPassMsg = document.getElementById('notPassMsg');
+    var resetBtn = document.getElementById('resetBtn');
+    resetBtn.style.display = 'none';
+    setEnventsMsg(0, false);
+    for (i=0; i < questionResults.length; i++) {
+        if(corrects[i] === answers[i]) {
+            questionResults[i].innerHTML = 'Correcta';
+            correctIcons[i].style.display = 'inline';
+        } else {
+            questionResults[i].innerHTML = 'Incorrecta'
+            incorrectIcons[i].style.display = 'inline';
+        }
+    }
+    if(resultFinalTest >= corrects.length * 0.8) {
+        passMsg.style.display = 'block';
+        passPage(10);
+    } else {
+        notPassMsg.style.display = 'block';
+        resetBtn.style.display = 'inline';
+    }
+    function reset() {
+        progress[9] = false;
+        answers = ['','','','',''];
+        resultFinalTest = 0;
+        currentPage = 1;
+        navTo();
+    }
+</script>
+

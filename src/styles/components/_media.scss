@@ -1,0 +1,28 @@
+.video-foot {
+    h2 {
+        font-size: 1.2rem;
+        color: $secondary-brand-color;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background-color: $secondary-brand-color;
+    }
+
+    p {
+        font-size: 1rem;
+        padding-right: 2rem;
+        b {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: $font-color;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .video-foot {
+        width: 100%;
+    }
+}

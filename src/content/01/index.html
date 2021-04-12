@@ -1,0 +1,34 @@
+<style>
+    .front img {
+        display: none;
+    }
+    .front img:first-child {
+        display: inline;
+    }
+</style>
+<div class="front">
+    <img src="img/p1.png">
+    <img src="img/p2.png">
+    <img src="img/p3.png">
+    <img src="img/p4.png">
+    <img src="img/p5.png">
+    <img src="img/p6.png">
+    <img src="img/p7.png">
+    <img src="img/p8.png">
+    <img src="img/p9.png">
+</div>
+<script>
+    var counterPics = 1;
+    var pics = document.querySelectorAll('.front img');
+    var timer = setInterval(function () {
+        pics[counterPics - 1].style.display = 'none';
+        pics[counterPics].style.display = 'inline';
+        counterPics++;
+        if (counterPics === pics.length) {
+            clearInterval(timer);
+            console.log('cleared');
+        }
+    }, 1000)
+    setEnventsMsg(0, false);
+    passPage(0);
+</script>

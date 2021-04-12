@@ -1,0 +1,21 @@
+
+.good-bye {
+    position: relative;
+    opacity: 0;
+    left: -400px;
+    width: 70%;
+    margin: 2rem auto 0;
+    padding: 3rem 0;
+    border-top: 3px solid $brand-color;
+    border-bottom: 3px solid $brand-color;
+    animation-name: left-fade-in;
+    animation-delay:  300ms;
+    animation-duration:  900ms;
+    animation-fill-mode: forwards;
+
+    h2 {
+        font-size: 2rem;
+        color: $brand-color;
+        text-align: center;
+    }
+}
